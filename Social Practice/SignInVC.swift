@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInVC.swift
 //  Social Practice
 //
 //  Created by Allen Czerwinski on 6/26/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

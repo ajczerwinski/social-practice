@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A4C7E6D1DB5AD8D5EEB35DDF /* Pods_Social_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D369F129853895A603812086 /* Pods_Social_Practice.framework */; };
 		BF89AB151F01CFE0006B667D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB141F01CFE0006B667D /* AppDelegate.swift */; };
-		BF89AB171F01CFE0006B667D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB161F01CFE0006B667D /* ViewController.swift */; };
+		BF89AB171F01CFE0006B667D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB161F01CFE0006B667D /* SignInVC.swift */; };
 		BF89AB1A1F01CFE0006B667D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF89AB181F01CFE0006B667D /* Main.storyboard */; };
 		BF89AB1C1F01CFE0006B667D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF89AB1B1F01CFE0006B667D /* Assets.xcassets */; };
 		BF89AB1F1F01CFE0006B667D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF89AB1D1F01CFE0006B667D /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		276CB89F491E23768CC0C466 /* Pods-Social Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Practice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Practice/Pods-Social Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		BF89AB111F01CFE0006B667D /* Social Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF89AB141F01CFE0006B667D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF89AB161F01CFE0006B667D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF89AB161F01CFE0006B667D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		BF89AB191F01CFE0006B667D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF89AB1B1F01CFE0006B667D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF89AB1E1F01CFE0006B667D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,8 +80,10 @@
 		BF89AB131F01CFE0006B667D /* Social Practice */ = {
 			isa = PBXGroup;
 			children = (
+				BF89AB2C1F0ED16F006B667D /* Model */,
+				BF89AB2B1F0ED167006B667D /* View */,
+				BF89AB2A1F0ED161006B667D /* Controller */,
 				BF89AB141F01CFE0006B667D /* AppDelegate.swift */,
-				BF89AB161F01CFE0006B667D /* ViewController.swift */,
 				BF89AB181F01CFE0006B667D /* Main.storyboard */,
 				BF89AB1B1F01CFE0006B667D /* Assets.xcassets */,
 				BF89AB1D1F01CFE0006B667D /* LaunchScreen.storyboard */,
@@ -89,6 +91,28 @@
 				BF89AB261F01DA4C006B667D /* GoogleService-Info.plist */,
 			);
 			path = "Social Practice";
+			sourceTree = "<group>";
+		};
+		BF89AB2A1F0ED161006B667D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF89AB161F01CFE0006B667D /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BF89AB2B1F0ED167006B667D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BF89AB2C1F0ED16F006B667D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF89AB171F01CFE0006B667D /* ViewController.swift in Sources */,
+				BF89AB171F01CFE0006B667D /* SignInVC.swift in Sources */,
 				BF89AB151F01CFE0006B667D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +409,7 @@
 				BF89AB251F01CFE0006B667D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
