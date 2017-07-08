@@ -14,6 +14,11 @@
 		BF89AB1C1F01CFE0006B667D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF89AB1B1F01CFE0006B667D /* Assets.xcassets */; };
 		BF89AB1F1F01CFE0006B667D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF89AB1D1F01CFE0006B667D /* LaunchScreen.storyboard */; };
 		BF89AB271F01DA4C006B667D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF89AB261F01DA4C006B667D /* GoogleService-Info.plist */; };
+		BF89AB2E1F1033D1006B667D /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB2D1F1033D1006B667D /* CustomView.swift */; };
+		BF89AB311F1051C6006B667D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB301F1051C6006B667D /* Constants.swift */; };
+		BF89AB331F105BF8006B667D /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB321F105BF8006B667D /* RoundBtn.swift */; };
+		BF89AB351F1060CD006B667D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB341F1060CD006B667D /* CustomTextField.swift */; };
+		BF89AB371F1062BD006B667D /* CustomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB361F1062BD006B667D /* CustomBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		BF89AB1E1F01CFE0006B667D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF89AB201F01CFE0006B667D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF89AB261F01DA4C006B667D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF89AB2D1F1033D1006B667D /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		BF89AB301F1051C6006B667D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF89AB321F105BF8006B667D /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		BF89AB341F1060CD006B667D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BF89AB361F1062BD006B667D /* CustomBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBtn.swift; sourceTree = "<group>"; };
 		D369F129853895A603812086 /* Pods_Social_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +90,7 @@
 		BF89AB131F01CFE0006B667D /* Social Practice */ = {
 			isa = PBXGroup;
 			children = (
+				BF89AB2F1F10380A006B667D /* Util */,
 				BF89AB2C1F0ED16F006B667D /* Model */,
 				BF89AB2B1F0ED167006B667D /* View */,
 				BF89AB2A1F0ED161006B667D /* Controller */,
@@ -104,6 +115,10 @@
 		BF89AB2B1F0ED167006B667D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF89AB2D1F1033D1006B667D /* CustomView.swift */,
+				BF89AB321F105BF8006B667D /* RoundBtn.swift */,
+				BF89AB341F1060CD006B667D /* CustomTextField.swift */,
+				BF89AB361F1062BD006B667D /* CustomBtn.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -113,6 +128,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BF89AB2F1F10380A006B667D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BF89AB301F1051C6006B667D /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF89AB2E1F1033D1006B667D /* CustomView.swift in Sources */,
+				BF89AB331F105BF8006B667D /* RoundBtn.swift in Sources */,
+				BF89AB351F1060CD006B667D /* CustomTextField.swift in Sources */,
+				BF89AB371F1062BD006B667D /* CustomBtn.swift in Sources */,
 				BF89AB171F01CFE0006B667D /* SignInVC.swift in Sources */,
 				BF89AB151F01CFE0006B667D /* AppDelegate.swift in Sources */,
+				BF89AB311F1051C6006B667D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
