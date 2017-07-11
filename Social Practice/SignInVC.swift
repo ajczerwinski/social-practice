@@ -12,6 +12,12 @@ import FBSDKLoginKit
 import Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailField: CustomTextField!
+    @IBOutlet weak var passwordField: CustomTextField!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,7 @@ class SignInVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // TODO - Consider adding other sign up methods e.g. Twitter, Google, Pinterest(?), etc
     @IBAction func facebookBtnTapped(_ sender: Any) {
         
         let facebookLogin = FBSDKLoginManager()
@@ -71,6 +78,29 @@ class SignInVC: UIViewController {
         })
         
     }
+    // TODO: Read Firebase documentation and address the other possible fail cases e.g. password less than 6 characters
+    @IBAction func signInBtnTapped(_ sender: Any) {
+        
+        if let email = emailField.text, let pwd = passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("AllenSuccess: Yay user successfully authenticated with Firebase!")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                    
+                        if error != nil {
+                            print("AllenError: Unable to authenticate with Firebase using email")
+                        } else {
+                            print("AllenSuccess: Successfully authenticated with Firebase")
+                        }
+                    
+                    })
+                }
+            })
+        }
+        
+    }
+    
 
 }
 

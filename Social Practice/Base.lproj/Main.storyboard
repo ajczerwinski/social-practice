@@ -102,6 +102,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbL-il-bZC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -125,6 +128,10 @@
                             <constraint firstItem="TlN-0o-pP5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vO9-gD-Ruv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="Wds-sV-WSU" id="zdA-Iz-gbt"/>
+                        <outlet property="passwordField" destination="gAr-s5-O5K" id="nC9-NS-tMK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
