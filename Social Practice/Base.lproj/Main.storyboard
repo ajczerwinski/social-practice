@@ -131,11 +131,65 @@
                     <connections>
                         <outlet property="emailField" destination="Wds-sV-WSU" id="zdA-Iz-gbt"/>
                         <outlet property="passwordField" destination="gAr-s5-O5K" id="nC9-NS-tMK"/>
+                        <segue destination="0eW-yv-pRG" kind="show" identifier="goToFeed" id="KvW-pa-xwc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="VPB-51-xNz">
+            <objects>
+                <viewController id="0eW-yv-pRG" customClass="FeedVC" customModule="Social_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fd-2N-aeP"/>
+                        <viewControllerLayoutGuide type="bottom" id="jqV-8C-8S7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QtI-Q3-qFN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPJ-GC-GeO">
+                                <rect key="frame" x="157" y="318" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInTapped:" destination="0eW-yv-pRG" eventType="touchUpInside" id="12l-tK-O8k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yPJ-GC-GeO" firstAttribute="centerY" secondItem="QtI-Q3-qFN" secondAttribute="centerY" id="VFm-8d-dDI"/>
+                            <constraint firstItem="yPJ-GC-GeO" firstAttribute="centerX" secondItem="QtI-Q3-qFN" secondAttribute="centerX" id="qMP-Bx-fdP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="3Wf-Qm-C17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Oa-2Z-vKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tHL-8e-NZZ">
+            <objects>
+                <viewController id="wxy-Ze-r9P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pA5-Pz-VYw"/>
+                        <viewControllerLayoutGuide type="bottom" id="M8K-lU-8eE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="18Q-Dx-hee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgM-TD-agj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

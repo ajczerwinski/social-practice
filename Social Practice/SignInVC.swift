@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -22,6 +23,18 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+            print("AllenData: successfully used keychain")
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +86,9 @@ class SignInVC: UIViewController {
                 print("AllenError: Unable to authenticate with Firebase \(error!)")
             } else {
                 print("AllenSuccess: Successfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
             
         })
@@ -85,6 +101,10 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("AllenSuccess: Yay user successfully authenticated with Firebase!")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
+                    
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                     
@@ -92,6 +112,10 @@ class SignInVC: UIViewController {
                             print("AllenError: Unable to authenticate with Firebase using email")
                         } else {
                             print("AllenSuccess: Successfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
+                            
                         }
                     
                     })
@@ -101,6 +125,13 @@ class SignInVC: UIViewController {
         
     }
     
+    func completeSignIn(id: String) {
+        
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        self.performSegue(withIdentifier: GO_TO_FEED, sender: nil)
+        print("AllenData: Data saved to keychain \(keychainResult)")
+        
+    }
 
 }
 
