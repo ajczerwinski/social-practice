@@ -20,6 +20,7 @@
 		BF89AB351F1060CD006B667D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB341F1060CD006B667D /* CustomTextField.swift */; };
 		BF89AB371F1062BD006B667D /* CustomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB361F1062BD006B667D /* CustomBtn.swift */; };
 		BF89AB391F154262006B667D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB381F154262006B667D /* FeedVC.swift */; };
+		BF89AB3B1F16BC2A006B667D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB3A1F16BC2A006B667D /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		BF89AB341F1060CD006B667D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BF89AB361F1062BD006B667D /* CustomBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBtn.swift; sourceTree = "<group>"; };
 		BF89AB381F154262006B667D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		BF89AB3A1F16BC2A006B667D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D369F129853895A603812086 /* Pods_Social_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 				BF89AB321F105BF8006B667D /* RoundBtn.swift */,
 				BF89AB341F1060CD006B667D /* CustomTextField.swift */,
 				BF89AB361F1062BD006B667D /* CustomBtn.swift */,
+				BF89AB3A1F16BC2A006B667D /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF89AB3B1F16BC2A006B667D /* CircleView.swift in Sources */,
 				BF89AB2E1F1033D1006B667D /* CustomView.swift in Sources */,
 				BF89AB331F105BF8006B667D /* RoundBtn.swift in Sources */,
 				BF89AB351F1060CD006B667D /* CustomTextField.swift in Sources */,
