@@ -23,6 +23,7 @@
 		BF89AB3B1F16BC2A006B667D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB3A1F16BC2A006B667D /* CircleView.swift */; };
 		BF89AB3D1F16F31E006B667D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB3C1F16F31E006B667D /* PostCell.swift */; };
 		BF89AB411F1C3E43006B667D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB401F1C3E43006B667D /* DataService.swift */; };
+		BF89AB431F1D5DF0006B667D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB421F1D5DEF006B667D /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		BF89AB3A1F16BC2A006B667D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		BF89AB3C1F16F31E006B667D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		BF89AB401F1C3E43006B667D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BF89AB421F1D5DEF006B667D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D369F129853895A603812086 /* Pods_Social_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		BF89AB2C1F0ED16F006B667D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF89AB421F1D5DEF006B667D /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				BF89AB3B1F16BC2A006B667D /* CircleView.swift in Sources */,
 				BF89AB2E1F1033D1006B667D /* CustomView.swift in Sources */,
 				BF89AB331F105BF8006B667D /* RoundBtn.swift in Sources */,
+				BF89AB431F1D5DF0006B667D /* Post.swift in Sources */,
 				BF89AB351F1060CD006B667D /* CustomTextField.swift in Sources */,
 				BF89AB371F1062BD006B667D /* CustomBtn.swift in Sources */,
 				BF89AB411F1C3E43006B667D /* DataService.swift in Sources */,
