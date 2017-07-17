@@ -47,21 +47,6 @@ class SignInVC: UIViewController {
         
         let facebookLogin = FBSDKLoginManager()
         
-        /*facebookLogin.logIn(withReadPermissions: ["email"], from: self, handler: {(result, error) in
-            
-            if error != nil {
-                print("AllenError: Login error \(error!)")
-            } else if result?.isCancelled == true {
-                print("AllenError: User canceled FB authentication")
-            } else {
-                print("AllenSuccess: successfully authenticated with FB")
-                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                
-                self.firebaseAuth(credential)
-            }
-            
-        })*/
-        
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             
             if error != nil {
@@ -87,7 +72,8 @@ class SignInVC: UIViewController {
             } else {
                 print("AllenSuccess: Successfully authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
             
@@ -102,7 +88,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("AllenSuccess: Yay user successfully authenticated with Firebase!")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                     
                 } else {
@@ -113,7 +100,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("AllenSuccess: Successfully authenticated with Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                             
                         }
@@ -125,8 +113,9 @@ class SignInVC: UIViewController {
         
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
         
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         self.performSegue(withIdentifier: GO_TO_FEED, sender: nil)
         print("AllenData: Data saved to keychain \(keychainResult)")
