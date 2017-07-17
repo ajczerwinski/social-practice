@@ -21,6 +21,7 @@
 		BF89AB371F1062BD006B667D /* CustomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB361F1062BD006B667D /* CustomBtn.swift */; };
 		BF89AB391F154262006B667D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB381F154262006B667D /* FeedVC.swift */; };
 		BF89AB3B1F16BC2A006B667D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB3A1F16BC2A006B667D /* CircleView.swift */; };
+		BF89AB3D1F16F31E006B667D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF89AB3C1F16F31E006B667D /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		BF89AB361F1062BD006B667D /* CustomBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBtn.swift; sourceTree = "<group>"; };
 		BF89AB381F154262006B667D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		BF89AB3A1F16BC2A006B667D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BF89AB3C1F16F31E006B667D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D369F129853895A603812086 /* Pods_Social_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				BF89AB341F1060CD006B667D /* CustomTextField.swift */,
 				BF89AB361F1062BD006B667D /* CustomBtn.swift */,
 				BF89AB3A1F16BC2A006B667D /* CircleView.swift */,
+				BF89AB3C1F16F31E006B667D /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				BF89AB171F01CFE0006B667D /* SignInVC.swift in Sources */,
 				BF89AB151F01CFE0006B667D /* AppDelegate.swift in Sources */,
 				BF89AB311F1051C6006B667D /* Constants.swift in Sources */,
+				BF89AB3D1F16F31E006B667D /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
