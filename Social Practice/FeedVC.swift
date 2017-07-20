@@ -16,10 +16,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var imageAddView: CircleView!
     
+    @IBOutlet weak var captionField: CustomTextField!
+    
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +87,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             
             imageAddView.image = image
+            imageSelected = true
             
         } else {
             print("AllenData: A valid image was selected")
@@ -98,8 +102,39 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
     }
     
+    @IBAction func postBtnTapped(_ sender: Any) {
+        
+        guard let caption = captionField.text, caption != "" else {
+            // TODO - Will want to add an error notification or something here if invalid data is entered
+            print("AllenError: Caption must be entered")
+            return
+        }
+        
+        guard let img = imageAddView.image, imageSelected == true else {
+            print("AllenError: Must select an image")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            DataService.ds.REF_POST_IMGS.child(imgUid).putData(imgData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("AllenError: Unable to upload image to Firebase storage")
+                } else {
+                    print("AllenData: Successfully uploaded image to Firebase storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+            }
+            
+        }
+        
+    }
     
-    @IBAction func signInTapped(_ sender: Any) {
+    
+    @IBAction func signOutTapped(_ sender: Any) {
         
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("AllenData: ID removed from keychain")
