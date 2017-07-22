@@ -19,7 +19,6 @@ class SignInVC: UIViewController {
     
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +29,7 @@ class SignInVC: UIViewController {
         
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             
-            performSegue(withIdentifier: "goToFeed", sender: nil)
+            performSegue(withIdentifier: GO_TO_FEED, sender: nil)
             print("AllenData: successfully used keychain")
             
         }

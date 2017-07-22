@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="660" y="90"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="VPB-51-xNz">
@@ -324,6 +324,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="isF-OE-YIM" id="8kp-di-ZTo"/>
+                                            <outlet property="likeImg" destination="xbQ-ZV-Te9" id="kbL-XD-AgV"/>
                                             <outlet property="likesLbl" destination="JRf-Qa-yhq" id="sCF-8N-nM6"/>
                                             <outlet property="postImg" destination="nbO-BP-kuv" id="Hck-d4-Ugi"/>
                                             <outlet property="profileImg" destination="Fny-zH-BDe" id="e1F-sa-yXr"/>
@@ -366,24 +367,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1037.5999999999999" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1623" y="90"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="tHL-8e-NZZ">
+        <scene sceneID="8g6-WE-xOJ">
             <objects>
-                <viewController id="wxy-Ze-r9P" sceneMemberID="viewController">
+                <viewController id="6Ma-q3-69g" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pA5-Pz-VYw"/>
-                        <viewControllerLayoutGuide type="bottom" id="M8K-lU-8eE"/>
+                        <viewControllerLayoutGuide type="top" id="YPY-Ha-4VJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VcN-Kc-7xB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="18Q-Dx-hee">
+                    <view key="view" contentMode="scaleToFill" id="Hz5-0q-lUi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lgM-TD-agj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6N-UW-Knb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2503" y="90"/>
         </scene>
     </scenes>
     <resources>
